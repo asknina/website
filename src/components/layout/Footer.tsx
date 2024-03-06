@@ -8,6 +8,7 @@ const Footer = () => {
         <Link href="/privacy-policy">Privacy Policy</Link>
         <Link href="/terms-of-use">Terms of Use</Link>
         <div>Copyright AskNina &#169; 2024</div>
+        {/* TODO: links to socials */}
       </div>
     </div>
   );

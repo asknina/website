@@ -7,10 +7,13 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="flex flex-col">
-      <Description />
+      {/* <Description />
       <Subscribe />
       <Features />
-      <Partnerships />
+      <Partnerships /> */}
+      <div className="w-full p-24 flex justify-center text-center">
+        Coming soon!
+      </div>
     </main>
   );
 }
