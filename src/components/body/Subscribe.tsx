@@ -3,8 +3,8 @@ import Container from "./Container";
 
 const Subscribe = () => {
   return (
-    <Container containerStyles="text-center justify-around p-10 z-20 shadow-[0px_0px_8px_4px_#00000024] bg-pink-200">
-      <div className="mb-8 italic">Currently in Private Beta</div>
+    <Container containerStyles="text-center p-8 justify-around z-20 shadow-[0px_0px_8px_4px_#00000024] bg-pink-200">
+      <div className="mb-4 italic">Currently in Private Beta</div>
       <div className="flex flex-col">
         <div className="mb-4">Sign up for first access at launch</div>
         <div className="flex flex-row justify-center items-center space-x-4">

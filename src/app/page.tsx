@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <Description />
-      <Subscribe />
       <Features />
       <Partnerships />
     </main>

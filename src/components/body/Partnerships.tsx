@@ -2,7 +2,10 @@ import Container from "./Container";
 
 const Partnerships = () => {
   return (
-    <Container containerStyles="bg-white shadow-[0px_0px_8px_4px_#00000024] z-20">
+    <Container
+      containerStyles="bg-white h-[60vH] p-24 shadow-[0px_0px_8px_4px_#00000024] z-20"
+      id="partnerships"
+    >
       <div>Contact us for partnerships!</div>
     </Container>
   );
