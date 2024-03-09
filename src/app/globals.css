@@ -31,3 +31,24 @@ body {
     text-wrap: balance;
   }
 }
+
+h1 {
+  @apply text-2xl font-bold;
+}
+
+h2 {
+  @apply text-xl font-bold;
+}
+
+ul {
+  @apply list-disc list-outside px-6;
+}
+
+th,
+td {
+  @apply p-1 border;
+}
+
+input[type="radio"] {
+  @apply hidden;
+}

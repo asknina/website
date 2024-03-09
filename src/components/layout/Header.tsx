@@ -14,8 +14,9 @@ const Header = () => {
           height={80}
         />
       </Link>
-      <div className="p-1 mr-4 flex justify-center items-center">
+      <div className="p-1 mr-4 flex justify-center items-center space-x-4 text-primaryPurple">
         <MenuComp />
+        <Link href="/fund">Fund</Link>
       </div>
     </div>
   );
