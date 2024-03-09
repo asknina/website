@@ -1,26 +1,26 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Container from "./Container";
+import EmailSubscribe from "./EmailSubscribe";
 
-const Subscribe = () => {
+const Subscribe = ({
+  headline,
+  otherStyles = "",
+}: {
+  headline: string;
+  otherStyles?: string;
+}) => {
   return (
-    <Container containerStyles="text-center justify-around p-10 z-20 shadow-[0px_0px_8px_4px_#00000024] bg-pink-200">
-      <div className="mb-8 italic">Currently in Private Beta</div>
-      <div className="flex flex-col">
-        <div className="mb-4">Sign up for first access at launch</div>
-        <div className="flex flex-row justify-center items-center space-x-4">
-          <div>
-            <input
-              placeholder="your@email.com"
-              className="border rounded-md p-1"
-            />
-          </div>
-          {/* TODO: SENDGRID integration */}
-          <div>
-            <button className="bg-primaryPink text-white border-2 border-black rounded-md w-24 p-1">
-              Go STEM
-            </button>
-          </div>
+    <Container
+      containerStyles={
+        "text-center p-8 justify-around z-20 shadow-[0px_0px_8px_4px_#00000024] bg-pink-200 flex flex-row " +
+        otherStyles
+      }
+    >
+      <div className="flex flex-col md:flex-row w-full max-w-screen-lg">
+        <div className="flex justify-center items-center font-display text-primaryPurple text-2xl md:pr-6 md:w-2/3">
+          {headline}
         </div>
+        <EmailSubscribe />
       </div>
     </Container>
   );
