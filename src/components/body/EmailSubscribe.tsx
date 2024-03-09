@@ -2,9 +2,9 @@ import React from "react";
 import ChooseHumanType from "./ChooseHumanType";
 const EmailSubscribe = () => {
   return (
-    <div className="flex md:flex-col p-4 md:p-2 space-x-4 md:space-x-0 md:space-y-2 items-center md:items-start">
-      <div className="flex flex-row">
-        <div className="mr-4">I&apos;m a/n:</div>
+    <div className="flex flex-col p-4 md:p-2 space-x-4 md:space-x-0 md:space-y-2 items-center md:items-start">
+      <div className="flex flex-row mb-2 md:mb-0">
+        <div className=" md:mr-4">I&apos;m a/n:</div>
         <ChooseHumanType />
       </div>
       <div>

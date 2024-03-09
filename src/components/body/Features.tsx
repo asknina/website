@@ -55,7 +55,7 @@ const Features = () => {
         </div>
       </div>
 
-      <div className="p-12 pb-0">
+      <div className="pt-6 md:p-12 pb-0">
         {/* <div className="text-center font-semibold mb-2">What we offer</div> */}
         <ul className="space-y-2">
           <li>

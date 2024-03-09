@@ -16,7 +16,7 @@ const Subscribe = ({
         otherStyles
       }
     >
-      <div className="flex flex-col md:flex-row max-w-screen-lg">
+      <div className="flex flex-col md:flex-row w-full max-w-screen-lg">
         <div className="flex justify-center items-center font-display text-primaryPurple text-2xl md:pr-6 md:w-2/3">
           {headline}
         </div>
