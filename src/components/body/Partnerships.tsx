@@ -9,9 +9,9 @@ import ShowThemeColors from "./ShowThemeColors";
 const Partnerships = () => {
   return (
     <>
-      <ShowThemeColors />
+      {/* <ShowThemeColors /> */}
       <Container
-        containerStyles="bg-primaryPurple text-white p-16 md:p-24 shadow-[0px_0px_8px_4px_#00000024] z-20 flex justify-center"
+        containerStyles="bg-white text-black p-16 md:p-24 shadow-[0px_0px_8px_4px_#00000024] z-20 flex justify-center"
         id="partnerships"
       >
         <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row max-w-screen-xl">

@@ -1,7 +1,7 @@
 import React from "react";
 import Container from "./Container";
 import Subscribe from "./Subscribe";
-import EmailSubscribe from "./EmailSubscribe";
+import EmailSubscribe from "../subscription/EmailRoleUI";
 const Description = () => {
   return (
     <Container containerStyles="p-0 min-h-[90vH] shadow-xl z-30 flex flex-col">

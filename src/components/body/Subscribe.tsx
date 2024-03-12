@@ -1,13 +1,15 @@
 import React, { ReactNode } from "react";
 import Container from "./Container";
-import EmailSubscribe from "./EmailSubscribe";
+import EmailRoleForm from "../subscription/EmailRoleForm";
 
 const Subscribe = ({
   headline,
   otherStyles = "",
+  roles,
 }: {
   headline: string;
   otherStyles?: string;
+  roles?: string[];
 }) => {
   return (
     <Container
@@ -20,7 +22,7 @@ const Subscribe = ({
         <div className="flex justify-center items-center font-display text-primaryPurple text-2xl md:pr-6 md:w-2/3">
           {headline}
         </div>
-        <EmailSubscribe />
+        <EmailRoleForm roles={roles} />
       </div>
     </Container>
   );

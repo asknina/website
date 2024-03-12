@@ -4,7 +4,7 @@ import Container from "./Container";
 const Features = () => {
   return (
     <Container
-      containerStyles="p-16 md:p-24 pt-16 bg-white z-0 items-center flex flex-col"
+      containerStyles="p-16 md:p-24 pt-16 bg-gray-100 z-0 items-center flex flex-col"
       id="features"
     >
       <div className="text-4xl mb-10 text-center max-w-screen-md font-semibold">

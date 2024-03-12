@@ -27,7 +27,10 @@ const About = () => {
         </div>
       </Container>
 
-      <Subscribe headline="Use Nina to brainstorm your next big idea! Sign up for first access at launch" />
+      <Subscribe
+        headline="Use Nina to brainstorm your next big idea! Sign up for first access at launch"
+        roles={["institution"]}
+      />
     </Container>
   );
 };
