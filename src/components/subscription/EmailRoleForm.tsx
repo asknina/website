@@ -4,7 +4,13 @@ import EmailRoleUI from "./EmailRoleUI";
 
 const defaultRoles = ["adult", "student"];
 
-const EnterEmail = ({ roles }: { roles?: string[] }) => {
+const EnterEmail = ({
+  roles,
+  showRoles = true,
+}: {
+  roles?: string[];
+  showRoles?: boolean;
+}) => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [error, setError] = useState({ error: false, message: null });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -64,6 +70,7 @@ const EnterEmail = ({ roles }: { roles?: string[] }) => {
               setRole={setRole}
               handleClick={handleClick}
               roles={rolesList}
+              showRoles={showRoles}
             />
           </>
         ) : (

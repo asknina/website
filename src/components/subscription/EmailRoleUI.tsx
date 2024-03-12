@@ -7,6 +7,7 @@ interface EmailSubscribeProps {
   currentRole: string;
   setRole: Function;
   roles: string[];
+  showRoles?: boolean;
 }
 const EmailSubscribe = ({
   handleClick,
@@ -15,38 +16,43 @@ const EmailSubscribe = ({
   currentRole,
   setRole,
   roles,
+  showRoles = true,
 }: EmailSubscribeProps) => {
   const handleOptionChange = (role: string) => {
     setRole(role);
   };
   return (
     <div className="flex flex-col p-4 md:p-2 space-x-4 md:space-x-0 md:space-y-2 items-center md:items-start">
-      <div className="flex flex-row mb-2 md:mb-0">
-        <div className=" md:mr-4">I&apos;m a/n:</div>
-        <div className="ml-2 flex flex-col items-start">
-          {/* mapped roles */}
-          {roles?.map((role) => (
-            <div className="inline-flex">
-              <label className="inline-flex items-center space-x-1">
-                <input
-                  type="radio"
-                  value={role}
-                  checked={currentRole == role}
-                  onClick={() => handleOptionChange(role)}
-                />
-                <span
-                  className={`rounded-full h-4 w-4 border-4 border-primaryPurple hover:cursor-pointer ${
-                    currentRole == role ? "bg-primaryPink" : "bg-primaryPurple"
-                  }`}
-                />
-                <span className="hover:cursor-pointer">
-                  {role[0].toUpperCase() + role.substring(1)}
-                </span>
-              </label>
-            </div>
-          ))}
+      {showRoles && (
+        <div className="flex flex-row mb-2 md:mb-0">
+          <div className=" md:mr-4">I&apos;m a/n:</div>
+          <div className="ml-2 flex flex-col items-start">
+            {/* mapped roles */}
+            {roles?.map((role) => (
+              <div className="inline-flex" key={role}>
+                <label className="inline-flex items-center space-x-1">
+                  <input
+                    type="radio"
+                    value={role}
+                    checked={currentRole == role}
+                    onClick={() => handleOptionChange(role)}
+                  />
+                  <span
+                    className={`rounded-full h-4 w-4 border-4 border-primaryPurple hover:cursor-pointer ${
+                      currentRole == role
+                        ? "bg-primaryPink"
+                        : "bg-primaryPurple"
+                    }`}
+                  />
+                  <span className="hover:cursor-pointer">
+                    {role[0].toUpperCase() + role.substring(1)}
+                  </span>
+                </label>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       <div>
         {/* email entry */}
@@ -68,10 +74,8 @@ const EmailSubscribe = ({
             </button>
           </div>
         </div>
-        <div className="flex justify-center text-center">
-          <div className="text-xs text-center max-w-[240px] pt-2 md:mt-0">
-            By entering your email address, you are confirming that you are 13+.{" "}
-          </div>
+        <div className="text-xs  max-w-[240px] pt-2 md:mt-0">
+          By entering your email address, you are confirming that you are 13+.{" "}
         </div>
       </div>
     </div>
