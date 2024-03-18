@@ -1,6 +1,12 @@
 import Container from "@/components/body/Container";
 import React from "react";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ask Nina AI | Terms",
+};
+
 const TermsAndConditions = () => {
   return (
     <Container containerStyles="p-24 pt-8">

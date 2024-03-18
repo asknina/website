@@ -2,10 +2,14 @@ import Container from "@/components/body/Container";
 import Subscribe from "@/components/body/Subscribe";
 import Link from "next/link";
 import React from "react";
-// import { Link } from "next";
-// import Subscribe from "./Subscribe";
 
-const About = () => {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ask Nina AI | Fund",
+};
+
+const Fund = () => {
   return (
     <Container containerStyles="p-0 min-h-[90vH] shadow-xl z-30 flex flex-col">
       <Container containerStyles="items-center justify-center flex flex-1 p-12">
@@ -45,4 +49,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Fund;
