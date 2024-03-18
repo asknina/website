@@ -36,8 +36,8 @@ const EnterEmail = ({
       if (!response.ok) {
         throw new Error(response.statusText);
       }
-      const result = await response;
-      setMessage("Thank you for submitting your email!");
+      await response;
+      setMessage("Success! You're now part of our inner circle.");
       setIsSubmitting(false);
       setHasSubmitted(true);
       setEmail("");
@@ -56,26 +56,22 @@ const EnterEmail = ({
     setTimeout(() => {
       setMessage("");
       setHasSubmitted(false);
-    }, 2000);
+    }, 4500);
   };
   return (
     <section>
+      <EmailRoleUI
+        email={email}
+        setEmail={setEmail}
+        currentRole={role}
+        setRole={setRole}
+        handleClick={handleClick}
+        roles={rolesList}
+        showRoles={showRoles}
+        isLoading={isSubmitting}
+      />
       <div>
-        {!hasSubmitted ? (
-          <>
-            <EmailRoleUI
-              email={email}
-              setEmail={setEmail}
-              currentRole={role}
-              setRole={setRole}
-              handleClick={handleClick}
-              roles={rolesList}
-              showRoles={showRoles}
-            />
-          </>
-        ) : (
-          <div>{message}</div>
-        )}
+        {hasSubmitted && <div>{message}</div>}
         {error && <p>{error.message}</p>}
       </div>
     </section>

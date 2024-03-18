@@ -1,6 +1,8 @@
 import Container from "@/components/body/Container";
 import Subscribe from "@/components/body/Subscribe";
+import Link from "next/link";
 import React from "react";
+// import { Link } from "next";
 // import Subscribe from "./Subscribe";
 
 const About = () => {
@@ -22,7 +24,14 @@ const About = () => {
             inclusive of two-spirit, transgender and gender non-binary youth, to
             succeed in entrepreneurship, STEM careers, and become confident
             contributors in their communities. Our support goes beyond
-            investment – learn more and apply for funding by emailing [xxx].
+            investment – learn more and apply for funding by emailing{" "}
+            <Link
+              href="mailto:askninaai+fund@gmail.com"
+              className="underline text-primaryPurple hover:cursor-pointer"
+            >
+              us
+            </Link>
+            .
           </div>
         </div>
       </Container>
@@ -30,6 +39,7 @@ const About = () => {
       <Subscribe
         headline="Use Nina to brainstorm your next big idea! Sign up for first access at launch"
         roles={["institution"]}
+        showRoles={false}
       />
     </Container>
   );

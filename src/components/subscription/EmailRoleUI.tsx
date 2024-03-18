@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 
 interface EmailSubscribeProps {
   handleClick: () => {};
@@ -7,6 +9,7 @@ interface EmailSubscribeProps {
   currentRole: string;
   setRole: Function;
   roles: string[];
+  isLoading: boolean;
   showRoles?: boolean;
 }
 const EmailSubscribe = ({
@@ -16,6 +19,7 @@ const EmailSubscribe = ({
   currentRole,
   setRole,
   roles,
+  isLoading,
   showRoles = true,
 }: EmailSubscribeProps) => {
   const handleOptionChange = (role: string) => {
@@ -54,9 +58,9 @@ const EmailSubscribe = ({
         </div>
       )}
 
-      <div>
+      <div className="flex flex-col text-left">
         {/* email entry */}
-        <div className="flex flex-row justify-center items-center space-x-4">
+        <div className="flex flex-row justify-start items-center space-x-4">
           <div>
             <input
               placeholder="your@email.com"
@@ -67,12 +71,16 @@ const EmailSubscribe = ({
           </div>
           <div>
             <button
-              className="bg-primaryPurple text-white border-2 border-black rounded-md w-24 p-1 shadow-xl"
+              className={` text-white border-2 border-black rounded-md w-24 p-1 shadow-xl ${
+                isLoading ? "bg-gray-200" : "bg-primaryPurple"
+              }`}
               onClick={handleClick}
+              disabled={isLoading}
             >
               Go STEM
             </button>
           </div>
+          <ClipLoader color="#423EEE" size={25} loading={isLoading} />
         </div>
         <div className="text-xs  max-w-[240px] pt-2 md:mt-0">
           By entering your email address, you are confirming that you are 13+.{" "}

@@ -8,7 +8,11 @@ const Description = () => {
       <Container containerStyles="items-center justify-center flex flex-1 p-12">
         <div className="text-center flex flex-col space-y-8 max-w-screen-lg">
           <div className="text-6xl font-display">
-            Explore STEM with Confidence with Ask Nina AI
+            Explore <span className="text-yellowGreen">S</span>
+            <span className="text-cerulean">T</span>
+            <span className="text-bgPurple">E</span>
+            <span className="text-primaryPink">M</span> with Confidence with Ask
+            Nina AI
           </div>
           <div className="text-2xl">
             From robots to rockets, explore your passions, connect with mentors,

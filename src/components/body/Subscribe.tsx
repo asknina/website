@@ -6,10 +6,12 @@ const Subscribe = ({
   headline,
   otherStyles = "",
   roles,
+  showRoles = true,
 }: {
   headline: string;
   otherStyles?: string;
   roles?: string[];
+  showRoles?: boolean;
 }) => {
   return (
     <Container
@@ -19,10 +21,10 @@ const Subscribe = ({
       }
     >
       <div className="flex flex-col md:flex-row w-full max-w-screen-lg">
-        <div className="flex justify-center items-center font-display text-primaryPurple text-2xl md:pr-6 md:w-2/3">
+        <div className="flex justify-center items-center font-display text-primaryPurple text-2xl md:pr-6 md:w-3/5">
           {headline}
         </div>
-        <EmailRoleForm roles={roles} />
+        <EmailRoleForm roles={roles} showRoles={showRoles} />
       </div>
     </Container>
   );
