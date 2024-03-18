@@ -1,10 +1,18 @@
 import React from "react";
 import Container from "./Container";
 
+import AnamitaImage from "../../../public/WorkingFieldPhoto1.jpeg";
+import Image from "next/image";
+
+import {
+  HiOutlineRocketLaunch,
+  HiComputerDesktop,
+  HiOutlineChatBubbleLeftRight,
+} from "react-icons/hi2";
 const Features = () => {
   return (
     <Container
-      containerStyles="p-16 md:p-24 pt-16 bg-white z-0 items-center flex flex-col"
+      containerStyles="p-16 md:p-24 pt-16 bg-gray-100 z-0 items-center flex flex-col"
       id="features"
     >
       <div className="text-4xl mb-10 text-center max-w-screen-md font-semibold">
@@ -15,8 +23,11 @@ const Features = () => {
       <div className="flex flex-col md:flex-row max-w-screen-lg justify-between md:space-x-4 space-y-4 md:space-y-0">
         <div className="rounded-md border p-4 bg-yellowGreen shadow-md md:w-1/3 w-full space-y-2">
           <h2 className="text-2xl text-center font-normal font-display">
-            Empowering Exploration
+            <p>Empowering</p> <p>Exploration</p>
           </h2>
+          <div className="w-full flex items-center justify-center">
+            <HiOutlineRocketLaunch size={60} />
+          </div>
           <p>
             Ask Nina AI encourages teen girls to explore STEM (Science,
             Technology, Engineering, and Mathematics) careers in a supportive
@@ -25,13 +36,14 @@ const Features = () => {
         </div>
         <div className="rounded-md border p-4 bg-cerulean shadow-md md:w-1/3 w-full space-y-2">
           <h2 className="text-2xl text-center font-normal font-display">
-            Inclusive Design
+            <p>Inclusive</p> <p>Design</p>
           </h2>
+          <div className="w-full flex items-center justify-center">
+            <HiComputerDesktop size={60} />
+          </div>
           <p>
             Ask Nina AI is meticulously crafted with an understanding of how
-            women interact with the internet, ensuring that its features and
-            responses resonate with the needs and preferences of teen girls,
-            thus contributing to closing the{" "}
+            women interact with the internet, thus contributing to closing the{" "}
             <a
               href="https://time.com/collection/davos-2020/5764698/gender-data-gap/"
               className="underline text-bgPurple"
@@ -43,65 +55,60 @@ const Features = () => {
         </div>
         <div className="rounded-md border p-4 bg-orange-300 shadow-md md:w-1/3 w-full space-y-2">
           <h2 className="text-2xl text-center font-normal font-display">
-            Curated Responses
+            <p>Curated</p> <p>Responses</p>
           </h2>
+          <div className="w-full flex items-center justify-center">
+            <HiOutlineChatBubbleLeftRight size={60} />
+          </div>
           <p>
             Each response from Ask Nina AI undergoes careful scrutiny by real
             women in STEM, guaranteeing accuracy, relevance, and inclusivity in
-            the information shared. This thorough process ensures safe and
-            targeted responses tailored to the specific needs and interests of
-            teen girls exploring STEM careers.
+            the information shared.
           </p>
         </div>
       </div>
 
-      <div className="pt-6 md:p-12 pb-0">
-        {/* <div className="text-center font-semibold mb-2">What we offer</div> */}
-        <ul className="space-y-2">
-          <li>
-            <b>Inspiring Role Models</b>: Meet real inspiring and diverse female
-            role models in STEM fields through Nina AI&apos;s curated content
-            and personalized recommendations.
-          </li>
-          <li>
-            <b>Career Guidance</b>: Get personalized career guidance and
-            insights tailored to individual interests and aspirations, helping
-            teen girls navigate their path in STEM.
-          </li>
-          <li>
-            <b>Interactive Learning</b>: Engage in interactive learning
-            experiences designed to foster curiosity and deepen understanding of
-            STEM concepts.
-          </li>
-          <li>
-            <b>Safe and Supportive Community</b>: Join a vibrant community of
-            like-minded teen girls, parents, and educators, where they can share
-            experiences, ask questions, and support each other in pursuing STEM
-            passions.
-          </li>
-          <li>
-            <b>Future Opportunities</b>: Discover internship, scholarship, and
-            educational opportunities in STEM fields to help teen girls pursue
-            their passions and achieve their goals.
-          </li>
-        </ul>
+      <div className="flex flex-col md:flex-row max-w-screen-lg mt-8 items-center h-full">
+        <div className="flex items-center justify-center w-full md:w-1/2 m-2 h-full relative rounded-md overflow-hidden">
+          <Image
+            src={AnamitaImage}
+            alt="WorkingField"
+            height={400}
+            width={600}
+            objectFit="cover"
+            objectPosition="right bottom"
+          />
+        </div>
+
+        <div className=" w-full md:w-2/3 md:p-6">
+          <h3 className="text-center text-lg mb-2 font-display">
+            What we offer
+          </h3>
+          <ul className="space-y-2">
+            <li>
+              <b>Inspiring Role Models</b>: Meet real inspiring and diverse
+              female role models in STEM fields through Nina AI&apos;s curated
+              content and personalized recommendations.
+            </li>
+            <li>
+              <b>Career Guidance</b>: Get personalized career guidance and
+              insights tailored to individual interests and aspirations, helping
+              teen girls navigate their path in STEM.
+            </li>
+            <li>
+              <b>Safe and Supportive Community</b>: Join a vibrant community of
+              like-minded teen girls, parents, and educators, where they can
+              share experiences, ask questions, and support each other in
+              pursuing STEM passions.
+            </li>
+            <li>
+              <b>Future Opportunities</b>: Discover internship, scholarship, and
+              educational opportunities in STEM fields to help teen girls pursue
+              their passions and achieve their goals.
+            </li>
+          </ul>
+        </div>
       </div>
-      {/* <div className="flex flex-row flex-wrap space-x-4 space-y-2">
-        <div className="bg-pink-100 w-20 h-20" />
-        <div className="bg-pink-200 w-20 h-20" />
-        <div className="bg-orange-100 w-20 h-20" />
-        <div className="bg-orange-200 w-20 h-20" />
-        <div className="bg-orange-300 w-20 h-20" />
-        <div className="bg-orange-400 w-20 h-20" />
-        <div className="bg-midGreen w-20 h-20" />
-        <div className="bg-cerulean w-20 h-20" />
-        <div className="bg-bgPurple w-20 h-20" />
-        <div className="bg-yellowGreen w-20 h-20" />
-        <div className="bg-paleGreen w-20 h-20" />
-        <div className="bg-brightLightBlue w-20 h-20" />
-        <div className="bg-brightYellow w-20 h-20" />
-        <div className="bg-peach w-20 h-20" />
-      </div> */}
     </Container>
   );
 };

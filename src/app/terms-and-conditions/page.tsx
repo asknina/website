@@ -1,6 +1,12 @@
 import Container from "@/components/body/Container";
 import React from "react";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ask Nina AI | Terms",
+};
+
 const TermsAndConditions = () => {
   return (
     <Container containerStyles="p-24 pt-8">
@@ -116,9 +122,10 @@ const TermsAndConditions = () => {
         </p>
         <p>
           <b>Opt Out.</b> If you do not want us to use your Content to train our
-          models, you can opt out by emailing a request to opt out to [ADDRESS].
-          Please note that in some cases this may limit the ability of our
-          Services to better address your specific use case.
+          models, you can opt out by emailing a request to opt out to
+          privacyataskina@gmail.com. Please note that in some cases this may
+          limit the ability of our Services to better address your specific use
+          case.
         </p>
         <p>
           <b>Accuracy.</b> Artificial intelligence and machine learning are
@@ -184,7 +191,7 @@ const TermsAndConditions = () => {
         <p>
           <b>Appeals.</b> If you believe we have suspended or terminated your
           account in error, you can file an appeal with us by contacting us at
-          [ADDRESS].
+          privacyataskina@gmail.com.
         </p>
 
         <h2>Discontinuation of Services</h2>
@@ -241,12 +248,13 @@ const TermsAndConditions = () => {
           try to address your concerns prior to formal legal action. Before
           either of us files a claim against the other, we both agree to try to
           resolve the Dispute informally. You agree to do so by sending us
-          notice to [ADDRESS]. We will do so by sending you notice to the email
-          address associated with your account. If we are unable to resolve a
-          Dispute within 60 days, either of us has the right to initiate
-          arbitration. We also both agree to attend an individual settlement
-          conference if either party requests one during this time. Any statute
-          of limitations will be tolled during this informal resolution process.
+          notice to privacyataskina@gmail.com. We will do so by sending you
+          notice to the email address associated with your account. If we are
+          unable to resolve a Dispute within 60 days, either of us has the right
+          to initiate arbitration. We also both agree to attend an individual
+          settlement conference if either party requests one during this time.
+          Any statute of limitations will be tolled during this informal
+          resolution process.
         </p>
         <p>
           <b>Governing Law.</b> New York law will govern all disputes arising
@@ -273,10 +281,10 @@ const TermsAndConditions = () => {
         <h2>Copyright Complaints</h2>
         <p>
           If you believe that your intellectual property rights have been
-          infringed, please send notice to [ADDRESS]. We may delete or disable
-          content that we believe violates these Terms or is alleged to be
-          infringing and will terminate accounts of repeat infringers where
-          appropriate.
+          infringed, please send notice to privacyataskina@gmail.com. We may
+          delete or disable content that we believe violates these Terms or is
+          alleged to be infringing and will terminate accounts of repeat
+          infringers where appropriate.
         </p>
         <p>
           Written claims concerning copyright infringement must include the

@@ -3,15 +3,14 @@ import Container from "./Container";
 
 import ifThenLogo from "../../../public/otherLogos/If-Then-Logo-One-Color-white-1200x395.png";
 import LHLogo from "../../../public/otherLogos/lydiahillcapitallogo.svg";
-import ShowThemeColors from "./ShowThemeColors";
-// import ifThenLogo from "public/otherLogos/If-Then-Logo-One-Color-white-1200x395.png";
+import EmailRoleForm from "../subscription/EmailRoleForm";
 
 const Partnerships = () => {
   return (
     <>
-      <ShowThemeColors />
+      {/* <ShowThemeColors /> */}
       <Container
-        containerStyles="bg-primaryPurple text-white p-16 md:p-24 shadow-[0px_0px_8px_4px_#00000024] z-20 flex justify-center"
+        containerStyles="bg-white text-black p-16 md:p-24 shadow-[0px_0px_8px_4px_#00000024] z-20 flex justify-center"
         id="partnerships"
       >
         <div className="flex flex-col space-y-8 md:space-y-0 md:flex-row max-w-screen-xl">
@@ -32,25 +31,7 @@ const Partnerships = () => {
                 Contact us and let&apos;s work together!
               </div>
               <div>
-                <div className="flex flex-row items-center space-x-4">
-                  <div>
-                    <input
-                      placeholder="your@email.com"
-                      className="border rounded-md p-1"
-                    />
-                  </div>
-                  {/* TODO: SENDGRID integration */}
-                  <div>
-                    <button className="bg-primaryPink text-white border-2 border-black rounded-md w-24 p-1 shadow-xl">
-                      Go STEM
-                    </button>
-                  </div>
-                </div>
-                {/* <div className="flex justify-center text-center">
-          <div className="text-xs text-center max-w-[240px] pt-2 md:mt-0">
-            By entering your email address, you are confirming that you are 13+.{" "}
-          </div>
-        </div> */}
+                <EmailRoleForm showRoles={false} roles={["partnerships"]} />
               </div>
             </div>
           </div>
