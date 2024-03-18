@@ -59,7 +59,7 @@ const EnterEmail = ({
     }, 4500);
   };
   return (
-    <section>
+    <section className="flex flex-col items-start justify-start">
       <EmailRoleUI
         email={email}
         setEmail={setEmail}
@@ -70,10 +70,14 @@ const EnterEmail = ({
         showRoles={showRoles}
         isLoading={isSubmitting}
       />
-      <div>
-        {hasSubmitted && <div>{message}</div>}
+      {/* <div> */}
+      <div className="text-xs max-w-[240px] pt-2 text-left">
+        {hasSubmitted && !error
+          ? message
+          : "By entering your email address, you are confirming that you are 13+"}
         {error && <p>{error.message}</p>}
       </div>
+      {/* </div> */}
     </section>
   );
 };

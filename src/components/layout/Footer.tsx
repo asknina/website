@@ -18,7 +18,7 @@ const Footer = () => {
           />
         </div>
 
-        <div className="flex flex-col w-full md:w-1/3">
+        <div className="flex flex-col w-full mb-6 md:mb-0 md:w-1/3">
           <div>
             <Link href="/terms-and-conditions">Terms and Conditions</Link>
           </div>

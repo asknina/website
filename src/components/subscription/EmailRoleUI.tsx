@@ -26,7 +26,7 @@ const EmailSubscribe = ({
     setRole(role);
   };
   return (
-    <div className="flex flex-col p-4 md:p-2 space-x-4 md:space-x-0 md:space-y-2 items-center md:items-start">
+    <div className="flex flex-col md:space-x-0 mt-2 md:mt-0 md:space-y-2 items-center md:items-start">
       {showRoles && (
         <div className="flex flex-row mb-2 md:mb-0">
           <div className=" md:mr-4">I&apos;m a/n:</div>
@@ -81,9 +81,6 @@ const EmailSubscribe = ({
             </button>
           </div>
           <ClipLoader color="#423EEE" size={25} loading={isLoading} />
-        </div>
-        <div className="text-xs  max-w-[240px] pt-2 md:mt-0">
-          By entering your email address, you are confirming that you are 13+.{" "}
         </div>
       </div>
     </div>

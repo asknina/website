@@ -24,7 +24,9 @@ const Subscribe = ({
         <div className="flex justify-center items-center font-display text-primaryPurple text-2xl md:pr-6 md:w-3/5">
           {headline}
         </div>
-        <EmailRoleForm roles={roles} showRoles={showRoles} />
+        <div className="flex flex-col items-center">
+          <EmailRoleForm roles={roles} showRoles={showRoles} />
+        </div>
       </div>
     </Container>
   );
