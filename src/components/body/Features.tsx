@@ -21,7 +21,7 @@ const Features = () => {
       </div>
 
       <div className="flex flex-col md:flex-row max-w-screen-lg justify-between md:space-x-4 space-y-4 md:space-y-0">
-        <div className="rounded-md border p-4 bg-yellowGreen shadow-md md:w-1/3 w-full space-y-2">
+        <div className="rounded-md border p-4 bg-yellowGreen shadow-md md:w-1/3 w-full space-y-4">
           <h2 className="text-2xl text-center font-normal font-display">
             <p>Empowering</p> <p>Exploration</p>
           </h2>
@@ -34,7 +34,7 @@ const Features = () => {
             and engaging environment.
           </p>
         </div>
-        <div className="rounded-md border p-4 bg-cerulean shadow-md md:w-1/3 w-full space-y-2">
+        <div className="rounded-md border p-4 bg-cerulean shadow-md md:w-1/3 w-full space-y-4">
           <h2 className="text-2xl text-center font-normal font-display">
             <p>Inclusive</p> <p>Design</p>
           </h2>
@@ -53,7 +53,7 @@ const Features = () => {
             in data and AI.
           </p>
         </div>
-        <div className="rounded-md border p-4 bg-orange-300 shadow-md md:w-1/3 w-full space-y-2">
+        <div className="rounded-md border p-4 bg-orange-300 shadow-md md:w-1/3 w-full space-y-4">
           <h2 className="text-2xl text-center font-normal font-display">
             <p>Curated</p> <p>Responses</p>
           </h2>
