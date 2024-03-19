@@ -75,8 +75,7 @@ const Features = () => {
             alt="WorkingField"
             height={400}
             width={600}
-            objectFit="cover"
-            objectPosition="right bottom"
+            className="object-cover object-right-bottom"
           />
         </div>
 

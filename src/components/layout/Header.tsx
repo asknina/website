@@ -5,14 +5,14 @@ import MenuComp from "./Menu";
 
 const Header = () => {
   return (
-    <div className="flex items-center max-w-screen-2xl">
+    <div className="flex items-center max-w-screen-2xl sticky top-0 z-50 bg-white h-content">
       <div className="w-full text-center flex flex-row h-[10vH] justify-between">
         <Link href="/">
           <Image
             src="/ask-nina-logo-400x400.png"
             alt="AskNinaLogo"
-            width={80}
-            height={80}
+            width={70}
+            height={70}
           />
         </Link>
         <div className="p-1 mr-4 flex justify-center items-center space-x-4 text-primaryPurple">
