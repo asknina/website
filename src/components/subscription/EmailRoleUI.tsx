@@ -2,7 +2,7 @@
 import React from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 
-interface EmailSubscribeProps {
+interface EmailRoleUIProps {
   handleClick: () => {};
   email: string;
   setEmail: Function;
@@ -12,7 +12,7 @@ interface EmailSubscribeProps {
   isLoading: boolean;
   showRoles?: boolean;
 }
-const EmailSubscribe = ({
+const EmailRoleUI = ({
   handleClick,
   email,
   setEmail,
@@ -21,7 +21,7 @@ const EmailSubscribe = ({
   roles,
   isLoading,
   showRoles = true,
-}: EmailSubscribeProps) => {
+}: EmailRoleUIProps) => {
   const handleOptionChange = (role: string) => {
     setRole(role);
   };
@@ -39,7 +39,7 @@ const EmailSubscribe = ({
                     type="radio"
                     value={role}
                     checked={currentRole == role}
-                    onClick={() => handleOptionChange(role)}
+                    onChange={() => handleOptionChange(role)}
                   />
                   <span
                     className={`rounded-full h-4 w-4 border-4 border-primaryPurple hover:cursor-pointer ${
@@ -65,6 +65,7 @@ const EmailSubscribe = ({
             <input
               placeholder="your@email.com"
               className="border rounded-md p-1"
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -87,4 +88,4 @@ const EmailSubscribe = ({
   );
 };
 
-export default EmailSubscribe;
+export default EmailRoleUI;

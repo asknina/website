@@ -12,7 +12,7 @@ const EnterEmail = ({
   showRoles?: boolean;
 }) => {
   const [hasSubmitted, setHasSubmitted] = useState(false);
-  const [error, setError] = useState({ error: false, message: null });
+  const [error, setError] = useState({ error: false, message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState<string>("");
 
@@ -21,41 +21,58 @@ const EnterEmail = ({
   const [role, setRole] = useState(rolesList[0]);
 
   const handleClick = async () => {
-    setIsSubmitting(true);
+    if (isValidEmail(email)) {
+      setIsSubmitting(true);
 
-    const settings = {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, role }),
-    };
-    try {
-      const response = await fetch(`/api/sendEmail`, settings);
-      if (!response.ok) {
-        throw new Error(response.statusText);
+      const settings = {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, role }),
+      };
+      try {
+        const response = await fetch(`/api/sendEmail`, settings);
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        await response;
+        setMessage("Success! You're now part of our inner circle.");
+        setIsSubmitting(false);
+        setHasSubmitted(true);
+        setEmail("");
+
+        handleReset();
+      } catch (error: any) {
+        setIsSubmitting(false);
+        setError({
+          error: true,
+          message: error.message,
+        });
       }
-      await response;
-      setMessage("Success! You're now part of our inner circle.");
-      setIsSubmitting(false);
-      setHasSubmitted(true);
-      setEmail("");
-
-      handleReset();
-    } catch (error: any) {
-      setIsSubmitting(false);
+    } else {
       setError({
         error: true,
-        message: error.message,
+        message: "Please enter a valid email",
       });
+      handleReset();
     }
   };
 
+  const isValidEmail = (text: string): Boolean => {
+    let re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(text);
+  };
   const handleReset = () => {
     setTimeout(() => {
       setMessage("");
       setHasSubmitted(false);
+      setError({
+        error: false,
+        message: "",
+      });
     }, 4500);
   };
   return (
@@ -75,8 +92,10 @@ const EnterEmail = ({
         {hasSubmitted && !error
           ? message
           : "By entering your email address, you are confirming that you are 13+"}
-        {error && <p>{error.message}</p>}
       </div>
+      {error && (
+        <p className="text-xs italic text-red-500 mt-2">{error.message}</p>
+      )}
       {/* </div> */}
     </section>
   );

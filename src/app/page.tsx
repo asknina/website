@@ -1,14 +1,8 @@
+"use client";
 import Description from "@/components/body/Description";
 import Features from "@/components/body/Features";
 import Partnerships from "@/components/body/Partnerships";
-
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Ask Nina AI | AI copilot for teen girls exploring STEM careers",
-  description:
-    "Ask Nina AI is empowering teen girls to explore STEM (Science, Technology, Engineering, and Mathematics) careers in a supportive and engaging environment through AI",
-};
+import ScrollToTop from "react-scroll-to-top";
 
 export default function Home() {
   return (
@@ -16,6 +10,15 @@ export default function Home() {
       <Description />
       <Features />
       <Partnerships />
+      <div className="z-50 flex rounded-full">
+        <ScrollToTop
+          color="#423EEE"
+          width={"20"}
+          height={"20"}
+          className="flex items-center justify-center"
+          style={{ borderRadius: "1000px" }}
+        />
+      </div>
     </main>
   );
 }
