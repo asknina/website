@@ -89,7 +89,7 @@ const EnterEmail = ({
       />
       {/* <div> */}
       <div className="text-xs max-w-[240px] pt-2 text-left">
-        {hasSubmitted && !error
+        {hasSubmitted && message
           ? message
           : "By entering your email address, you are confirming that you are 13+"}
       </div>
