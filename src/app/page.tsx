@@ -6,7 +6,7 @@ import ScrollToTop from "react-scroll-to-top";
 
 export default function Home() {
   return (
-    <main className="flex flex-col">
+    <main className="flex flex-col text-black">
       <Description />
       <Features />
       <Partnerships />
