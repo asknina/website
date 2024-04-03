@@ -12,8 +12,8 @@ const Header = () => {
             <Image
               src="/ask-nina-logo-400x400.png"
               alt="AskNinaLogo"
-              width={70}
-              height={70}
+              width={65}
+              height={65}
             />
           </Link>
           <div className="p-1 mr-4 flex justify-center items-center space-x-4 text-primaryPurple">

@@ -80,7 +80,7 @@ const Features = () => {
         </div>
 
         <div className=" w-full md:w-2/3 md:p-6">
-          <h3 className="text-center text-lg mb-2 font-display">
+          <h3 className="text-center text-2xl mb-6 font-display">
             What we offer
           </h3>
           <ul className="space-y-2">

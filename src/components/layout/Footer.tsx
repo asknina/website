@@ -32,7 +32,7 @@ const Footer = () => {
           <Link href="https://www.instagram.com/askninaai/">
             <FaInstagram size={30} />
           </Link>
-          <Link href="https://www.tiktok.com/askninaai">
+          <Link href="https://www.tiktok.com/@askninaai">
             <FaTiktok size={30} />
           </Link>
           <Link href="https://www.linkedin.com/company/ask-nina-ai/">
