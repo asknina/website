@@ -1,6 +1,5 @@
 import Container from "@/components/body/Container";
 import React from "react";
-import { GoogleAnalytics } from "nextjs-google-analytics";
 
 import type { Metadata } from "next";
 
@@ -11,7 +10,6 @@ export const metadata: Metadata = {
 const TermsAndConditions = () => {
   return (
     <>
-      <GoogleAnalytics trackPageViews />
       <Container containerStyles="p-24 pt-8">
         <div className="space-y-4">
           <div>Effective March 8, 2024</div>
