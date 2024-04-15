@@ -43,7 +43,7 @@ const Fund = () => {
 
         <Subscribe
           headline="Use Nina to brainstorm your next big idea! Sign up for first access at launch"
-          roles={["institution"]}
+          roles={["fund"]}
           showRoles={false}
         />
       </Container>
