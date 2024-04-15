@@ -3,7 +3,6 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -27,8 +26,6 @@ export default function RootLayout({
           <Footer />
         </div>
       </body>
-      {/* @ts-ignore-error */}
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
     </html>
   );
 }

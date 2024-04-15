@@ -3,10 +3,12 @@ import Description from "@/components/body/Description";
 import Features from "@/components/body/Features";
 import Partnerships from "@/components/body/Partnerships";
 import ScrollToTop from "react-scroll-to-top";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 export default function Home() {
   return (
     <main className="flex flex-col text-black">
+      <GoogleAnalytics trackPageViews />
       <Description />
       <Features />
       <Partnerships />
