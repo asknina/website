@@ -5,29 +5,6 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 
 const FundPageContent = () => {
-
-  useEffect(() => {
-    // customEvent
-    const handleFundPageClick = () => {
-        console.log("handleFundPageClick function triggered")
-
-      const event = new CustomEvent("fundPageClicked", {
-        detail: {
-          page: "Fund",
-          source: "Home",
-        },
-      });
-      window.dispatchEvent(event);
-    };
-
-    document.addEventListener("onload", handleFundPageClick);
-
-    return () => {
-      document.removeEventListener("onload", handleFundPageClick);
-    };
-
-    }, [])
-
   return (
     <>
       <Container containerStyles="p-0 min-h-[90vH] shadow-xl z-30 flex flex-col">
