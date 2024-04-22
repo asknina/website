@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import EmailRoleUI from "./EmailRoleUI";
-import { event } from "nextjs-google-analytics";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const defaultRoles = ["adult", "student"];
 
@@ -21,16 +21,15 @@ const EnterEmail = ({
   const [email, setEmail] = useState("");
   const [role, setRole] = useState(rolesList[0]);
 
-  const sendToGoogle = () => {
-    event("submit_email", {
-      category: "Contact",
-      label: JSON.stringify({email, role})
-    });
-  }
-
   const handleClick = async () => {
-    sendToGoogle()
-    
+    sendGAEvent({
+      event: "submit_email",
+      value: {
+        category: "Contact",
+        label: JSON.stringify({ email, role }),
+      },
+    });
+
     if (isValidEmail(email)) {
       setIsSubmitting(true);
 

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.2",
     "@szhsin/react-menu": "^4.1.0",
     "google-auth-library": "^9.6.3",
     "google-spreadsheet": "^4.1.1",
