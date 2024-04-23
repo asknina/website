@@ -3,8 +3,18 @@ import Container from "@/components/body/Container";
 import Subscribe from "@/components/body/Subscribe";
 import Link from "next/link";
 import React, { useEffect } from "react";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const FundPageContent = () => {
+  useEffect(() => {
+    sendGAEvent({
+      event: "view_fund",
+      value: {
+        category: "View",
+      },
+    });
+  }, []);
+
   return (
     <>
       <Container containerStyles="p-0 min-h-[90vH] shadow-xl z-30 flex flex-col">
