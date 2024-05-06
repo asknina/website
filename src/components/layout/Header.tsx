@@ -19,9 +19,7 @@ const Header = () => {
           <div className="p-1 mr-4 flex justify-center items-center space-x-4 text-primaryPurple">
             <Link href="/">Home</Link>
             <MenuComp />
-            <Link href="/fund" target="_blank" rel="noopener noreferrer">
-              Fund
-            </Link>
+            <Link href="/fund">Fund</Link>
           </div>
         </div>
       </div>
