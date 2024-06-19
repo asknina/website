@@ -3,6 +3,7 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Banner from "@/components/layout/Banner";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={nunito.className}>
         <div className="bg-white min-h-screen w-full flex flex-col text-black">
           <Header />
+          <Banner />
           <div className="flex-1">{children}</div>
           <Footer />
         </div>
