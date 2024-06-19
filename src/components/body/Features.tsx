@@ -69,7 +69,7 @@ const Features = () => {
       </div>
 
       <div className="flex flex-col md:flex-row max-w-screen-lg mt-8 items-center h-full">
-        <div className="flex items-center justify-center w-full md:w-1/2 m-2 h-full relative rounded-md overflow-hidden">
+        {/* <div className="flex items-center justify-center w-full md:w-1/2 m-2 h-full relative rounded-md overflow-hidden">
           <Image
             src={AnamitaImage}
             alt="WorkingField"
@@ -77,9 +77,9 @@ const Features = () => {
             width={600}
             className="object-cover object-right-bottom"
           />
-        </div>
+        </div> */}
 
-        <div className=" w-full md:w-2/3 md:p-6">
+        <div className=" w-full md:p-6">
           <h3 className="text-center text-2xl mb-6 font-display">
             What we offer
           </h3>

@@ -16,13 +16,13 @@ const Header = () => {
               height={65}
             />
           </Link>
-          <div className="p-1 mr-4 flex justify-center items-center space-x-4 text-primaryPurple">
+          <div className="text-lg p-1 mr-4 flex justify-center items-center space-x-4 text-primaryPurple">
             <Link href="/">Home</Link>
             {/* <MenuComp /> */}
             <Link href="/fund">Fund</Link>
           </div>
         </div>
-        <div className="flex flex-row space-x-4 items-center justify-center">
+        <div className="flex-row space-x-4 items-center justify-center hidden md:flex">
           <a
             className="text-primaryPurple"
             href={"http://app.asknina.ai"}
