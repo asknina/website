@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useRef } from "react";
 import Container from "./Container";
 
-import AnamitaImage from "../../../public/WorkingFieldPhoto1.jpeg";
-import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 
 import {
   HiOutlineRocketLaunch,
@@ -10,18 +9,30 @@ import {
   HiOutlineChatBubbleLeftRight,
 } from "react-icons/hi2";
 const Features = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <Container
-      containerStyles="p-16 md:p-24 pt-16 bg-gray-100 z-0 items-center flex flex-col"
+      containerStyles="p-16 md:p-24 pt-16 bg-gray-100 z-0 items-center flex flex-col overflow-hidden"
       id="features"
     >
       <div className="text-4xl mb-10 text-center max-w-screen-md font-semibold">
         Ask Nina AI is on a mission to empower teen girls to discover STEM
         careers
       </div>
-
-      <div className="flex flex-col md:flex-row max-w-screen-lg justify-between md:space-x-4 space-y-4 md:space-y-0">
-        <div className="rounded-md border p-4 bg-yellowGreen shadow-md md:w-1/3 w-full space-y-4">
+      <motion.div
+        ref={ref}
+        className="flex flex-col md:flex-row max-w-screen-lg justify-between md:space-x-4 space-y-4 md:space-y-0"
+      >
+        <motion.div
+          className="rounded-md border p-4 bg-yellowGreen shadow-md md:w-1/3 w-full space-y-4"
+          style={{
+            transform: isInView ? "none" : "translateY(50px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s",
+          }}
+        >
           <h2 className="text-2xl text-center font-normal font-display">
             <p>Empowering</p> <p>Exploration</p>
           </h2>
@@ -33,8 +44,15 @@ const Features = () => {
             Technology, Engineering, and Mathematics) careers in a supportive
             and engaging environment.
           </p>
-        </div>
-        <div className="rounded-md border p-4 bg-cerulean shadow-md md:w-1/3 w-full space-y-4">
+        </motion.div>
+        <motion.div
+          className="rounded-md border p-4 bg-cerulean shadow-md md:w-1/3 w-full space-y-4"
+          style={{
+            transform: isInView ? "none" : "translateY(50px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.6s",
+          }}
+        >
           <h2 className="text-2xl text-center font-normal font-display">
             <p>Inclusive</p> <p>Design</p>
           </h2>
@@ -52,8 +70,16 @@ const Features = () => {
             </a>{" "}
             in data and AI.
           </p>
-        </div>
-        <div className="rounded-md border p-4 bg-orange-300 shadow-md md:w-1/3 w-full space-y-4">
+        </motion.div>
+
+        <motion.div
+          className="rounded-md border p-4 bg-orange-300 shadow-md md:w-1/3 w-full space-y-4"
+          style={{
+            transform: isInView ? "none" : "translateY(50px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1s",
+          }}
+        >
           <h2 className="text-2xl text-center font-normal font-display">
             <p>Curated</p> <p>Responses</p>
           </h2>
@@ -65,21 +91,17 @@ const Features = () => {
             women in STEM, guaranteeing accuracy, relevance, and inclusivity in
             the information shared.
           </p>
-        </div>
-      </div>
-
+        </motion.div>
+      </motion.div>
       <div className="flex flex-col md:flex-row max-w-screen-lg mt-8 items-center h-full">
-        {/* <div className="flex items-center justify-center w-full md:w-1/2 m-2 h-full relative rounded-md overflow-hidden">
-          <Image
-            src={AnamitaImage}
-            alt="WorkingField"
-            height={400}
-            width={600}
-            className="object-cover object-right-bottom"
-          />
-        </div> */}
-
-        <div className=" w-full md:p-6">
+        <motion.div
+          className="w-full md:p-6"
+          style={{
+            transform: isInView ? "none" : "translateX(150px)",
+            opacity: isInView ? 1 : 0,
+            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 1.6s",
+          }}
+        >
           <h3 className="text-center text-2xl mb-6 font-display">
             What we offer
           </h3>
@@ -106,7 +128,7 @@ const Features = () => {
               their passions and achieve their goals.
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </Container>
   );
