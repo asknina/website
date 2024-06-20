@@ -22,7 +22,7 @@ const Header = () => {
             <Link href="/fund">Fund</Link>
           </div>
         </div>
-        <div className="flex-row space-x-4 items-center justify-center hidden">
+        <div className="flex-row space-x-4 items-center justify-center hidden md:flex">
           <a
             className="text-primaryPurple"
             href={"http://app.asknina.ai"}
