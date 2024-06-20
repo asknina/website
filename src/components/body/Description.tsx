@@ -55,8 +55,8 @@ const Description = () => {
           Sign up now to stay informed and get exclusive updates for all things Nina"
       /> */}
       <Subscribe
-        headline="Want to be a part of something extraordinary? Sign up now to stay
-               informed and get exclusive access when Ask Nina AI launches!"
+        headline="Want to be a part of something extraordinary? 
+          Sign up now to stay informed and get exclusive updates for all things Nina"
       />
     </Container>
   );
