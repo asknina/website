@@ -40,7 +40,9 @@ const config: Config = {
         peach: "#F97777"
 
       },
-
+      fontWeight: {
+        medium: '500'
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
