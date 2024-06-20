@@ -26,8 +26,8 @@ const Description = () => {
               Nina.
             </div>
 
-            {/* <div className="mb-4 italic">Currently in Private Beta</div> */}
-            <div className="">
+            <div className="mb-4 italic">Currently in Private Beta</div>
+            <div className="hidden">
               <a
                 className="bg-bgPurple text-white rounded-md p-3"
                 href={"http://app.asknina.ai"}
@@ -50,9 +50,13 @@ const Description = () => {
           </div>
         </div>
       </Container>
-      <Subscribe
+      {/* <Subscribe
         headline="Want to be a part of something extraordinary? 
           Sign up now to stay informed and get exclusive updates for all things Nina"
+      /> */}
+      <Subscribe
+        headline="Want to be a part of something extraordinary? Sign up now to stay
+               informed and get exclusive access when Ask Nina AI launches!"
       />
     </Container>
   );
