@@ -127,6 +127,12 @@ const Features = () => {
               educational opportunities in STEM fields to help teen girls pursue
               their passions and achieve their goals.
             </li>
+            <li>
+              <b>Language Support</b>: With support for over 13 languages, Nina
+              is the perfect companion for girls to communicate confidently and
+              comfortably. It ensures that every girl can connect and express
+              herself in the language she feels most at home with.
+            </li>
           </ul>
         </motion.div>
       </div>
