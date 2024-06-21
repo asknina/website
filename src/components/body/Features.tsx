@@ -18,7 +18,7 @@ const Features = () => {
       id="features"
     >
       <div className="text-4xl mb-10 text-center max-w-screen-md font-semibold">
-        Ask Nina AI is on a mission to empower teen girls to discover STEM
+        Ask Nina AI is on a mission to empower teen girls to explore STEM
         careers
       </div>
       <motion.div
