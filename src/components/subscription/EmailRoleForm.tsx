@@ -24,7 +24,7 @@ const EnterEmail = ({
   const handleClick = async (e: any) => {
     e.preventDefault();
     sendGTMEvent({
-      event: "buttonClicked",
+      event: "emailSignUp",
       value: { email, role },
     });
     sendGAEvent({
