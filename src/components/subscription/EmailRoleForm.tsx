@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import EmailRoleUI from "./EmailRoleUI";
-import { sendGAEvent } from "@next/third-parties/google";
+import { sendGAEvent, sendGTMEvent } from "@next/third-parties/google";
 
 const defaultRoles = ["adult", "student"];
 
@@ -23,6 +23,10 @@ const EnterEmail = ({
 
   const handleClick = async (e: any) => {
     e.preventDefault();
+    sendGTMEvent({
+      event: "buttonClicked",
+      value: { email },
+    });
     sendGAEvent({
       event: "submit_email",
       value: {
