@@ -24,7 +24,7 @@ const Header = () => {
         </div>
         <div className="flex-row space-x-4 items-center justify-center flex">
           <a
-            className="text-primaryPurple"
+            className="text-primaryPurple hidden md:block"
             href={"http://app.asknina.ai"}
             target="_blank"
           >
