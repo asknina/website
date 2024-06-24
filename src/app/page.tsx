@@ -3,12 +3,10 @@ import Description from "@/components/body/Description";
 import Features from "@/components/body/Features";
 import Partnerships from "@/components/body/Partnerships";
 import ScrollToTop from "react-scroll-to-top";
-import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function Home() {
   return (
     <main className="flex flex-col text-black">
-      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ""} />
       <Description />
       <Features />
       <Partnerships />

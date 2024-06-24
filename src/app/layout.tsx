@@ -5,6 +5,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Banner from "@/components/layout/Banner";
 
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+
 const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,6 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-white text-black">
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ""} />
+      <GoogleTagManager gtmId={process.env.NEXT_GTM_ID || ""} />
       <body className={nunito.className}>
         <div className="bg-white min-h-screen w-full flex flex-col text-black">
           <Header />
