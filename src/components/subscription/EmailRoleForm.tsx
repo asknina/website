@@ -25,7 +25,7 @@ const EnterEmail = ({
     e.preventDefault();
     sendGTMEvent({
       event: "buttonClicked",
-      value: { email },
+      value: { email, role },
     });
     sendGAEvent({
       event: "submit_email",
