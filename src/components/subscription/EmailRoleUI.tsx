@@ -26,7 +26,10 @@ const EmailRoleUI = ({
     setRole(role);
   };
   return (
-    <form className="flex flex-col md:space-x-0 mt-2 md:mt-0 md:space-y-2 items-center md:items-start">
+    <form
+      className="flex flex-col md:space-x-0 mt-2 md:mt-0 md:space-y-2 items-center md:items-start"
+      onSubmit={handleClick}
+    >
       {showRoles && (
         <div className="flex flex-row mb-2 md:mb-0">
           <div className=" md:mr-4">I&apos;m a/n:</div>
@@ -75,7 +78,6 @@ const EmailRoleUI = ({
               className={` text-white border-2 border-black rounded-md w-24 p-1 shadow-xl ${
                 isLoading ? "bg-gray-200" : "bg-primaryPurple"
               }`}
-              onClick={handleClick}
               disabled={isLoading}
               type="submit"
             >
