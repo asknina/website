@@ -21,7 +21,8 @@ const EnterEmail = ({
   const [email, setEmail] = useState("");
   const [role, setRole] = useState(rolesList[0]);
 
-  const handleClick = async () => {
+  const handleClick = async (e: any) => {
+    e.preventDefault();
     sendGAEvent({
       event: "submit_email",
       value: {
