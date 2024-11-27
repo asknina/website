@@ -33,7 +33,7 @@ const Header = () => {
           </a>
           <a
             className="rounded-full w-36 py-1 bg-yellowGreen text-white text-center"
-            href={"http://app.asknina.ai/register"}
+            href={"http://app.asknina.ai"}
             target="_blank"
           >
             Get Started
