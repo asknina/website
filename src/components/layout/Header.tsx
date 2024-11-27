@@ -20,6 +20,7 @@ const Header = () => {
             <Link href="/">Home</Link>
             {/* <MenuComp /> */}
             <Link href="/fund">Fund</Link>
+            <Link href="/about">About</Link>
           </div>
         </div>
         <div className="flex-row space-x-4 items-center justify-center flex">
