@@ -26,10 +26,19 @@ const contributors = [
 ];
 const formerContributors = [
   {
-    name: "Ying",
+    name: "Ying W.",
     title: "Cornell University, Class of 2024",
     favoriteSTEMSubject: "Artificial Intelligence",
-    image: "",
+  },
+  {
+    name: "XiLin C.",
+    title: "University of California, Berkeley, Class of 2024",
+    favoriteSTEMSubject: "Psychology",
+  },
+  {
+    name: "Claire W.",
+    title: "HS Student in San Diego, CA",
+    favoriteSTEMSubject: "Chemistry",
   },
 ];
 
@@ -43,15 +52,15 @@ const borderColors = [
 const MeetTheTeam = () => {
   return (
     <div className="flex flex-col items-center py-12">
-      <div className="font-display flex items-center justify-center text-5xl p-8">
+      <div className="font-display flex items-center justify-center text-5xl p-6 md:p-8">
         <div className="max-w-screen-lg">Meet the Team</div>
       </div>
-      <div className="flex justify-center items-start flex-1 max-w-screen-lg w-full">
+      <div className="flex md:flex-row flex-col justify-center items-start flex-1 max-w-screen-lg w-full space-y-8 md:space-y-0">
         {contributors.map((team, index) => {
           return (
             <div
               key={team.name}
-              className={`w-1/${contributors.length} flex flex-col items-center space-y-4`}
+              className={`w-full md:w-1/${contributors.length} flex flex-col items-center space-y-4`}
             >
               <div
                 className={`w-24 h-24 rounded-full border-4 flex shadow-lg border-${borderColors[index]} overflow-hidden`}
@@ -67,12 +76,13 @@ const MeetTheTeam = () => {
           );
         })}
       </div>
-      <div className="font-display flex items-center justify-center p-8">
+      <div className="font-display flex  p-8">
         <div className="max-w-screen-lg text-lg font-semibold text-left">
           Former Student Contributors
         </div>
       </div>
-      <div className="flex justify-left items-start flex-1 max-w-screen-lg w-full">
+
+      <div className="flex justify-left items-start flex-1 max-w-screen-lg w-full px-4">
         {formerContributors.map((team, index) => {
           return (
             <div
