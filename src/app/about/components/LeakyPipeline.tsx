@@ -1,12 +1,11 @@
 import React from "react";
 import leakyPipelineInfo from "../../../../public/LeakyPipelineInfo.png";
 import Image from "next/image";
-import AnamitaImage from "../../../../public/WorkingFieldPhoto1.jpeg";
 
 const LeakyPipeline = () => {
   return (
     <div className=" flex flex-col  z-10">
-      <div className="h-[32vH] font-display flex items-center justify-center text-5xl bg-gradient-to-r from-primaryPurple to-primaryPink ">
+      <div className="min-h-fit py-12 md:h-[32vH] font-display flex items-center justify-center text-5xl bg-gradient-to-r from-primaryPurple to-primaryPink ">
         <div className="max-w-screen-lg text-white px-4 md:px-0">
           We&apos;re on a mission to inspire teen girls to explore STEM careers
         </div>
