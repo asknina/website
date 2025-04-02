@@ -40,7 +40,9 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="text-sm">&#169; 2024 Ask Nina AI</div>
+      <div className="text-sm">
+        &#169; {new Date().getFullYear()} Ask Nina AI
+      </div>
     </div>
   );
 };

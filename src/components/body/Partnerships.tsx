@@ -3,6 +3,7 @@ import Container from "./Container";
 
 import ifThenLogo from "../../../public/otherLogos/If-Then-Logo-One-Color-white-1200x395.png";
 import LHLogo from "../../../public/otherLogos/lydiahillcapitallogo.svg";
+import NycPublicSchoolLogo from "../../../public/otherLogos/nycps-logo.png";
 import EmailRoleForm from "../subscription/EmailRoleForm";
 
 const Partnerships = () => {
@@ -49,6 +50,14 @@ const Partnerships = () => {
               <Image
                 src={ifThenLogo}
                 alt={"If Then Nonprofit Logo"}
+                height={395}
+                width={1200}
+              />
+            </div>
+            <div className="w-4/5 p-2 m-2 mt-8">
+              <Image
+                src={NycPublicSchoolLogo}
+                alt={"NYC Public Schools Logo"}
                 height={395}
                 width={1200}
               />
