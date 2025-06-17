@@ -35,7 +35,7 @@ const LeakyPipeline = () => {
                   Leaky pipeline is the phenomenon in which{" "}
                   <span className="text-primaryPink font-semibold">
                     our beliefs about gender difference in academic subject
-                    performance pushes girls out of the STEM fields
+                    performance pushes girls out of STEM fields
                   </span>{" "}
                   while encouraging boys to choose STEM.{" "}
                 </p>
