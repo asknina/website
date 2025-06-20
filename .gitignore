@@ -35,3 +35,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 package-lock.json
+
+# JetBrains IDE (WebStorm/IntelliJ)
+.idea/
+*.iml
+*.iws
+*.ids

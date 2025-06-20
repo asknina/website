@@ -20,12 +20,10 @@ const LeakyPipeline = () => {
           <div className="flex flex-col md:flex-row w-full items-center justify-center">
             <div className="flex md:w-1/2 flex-col py-4 mt-4 order-2 md:order-1">
               <div className="text-lg space-y-4">
-                The number of women pursuing STEM decreases at each stage from
-                education to the workforce, starting as{" "}
+                The number of women pursuing STEM decreases at each stage from education to the workforce, starting as {" "}
                 <span className="text-primaryPink font-semibold">
                   early as middle school
-                </span>{" "}
-                STEM fields while encouraging boys to choose STEM.{" "}
+                </span>.{" "}
                 <p className="py-2">
                   This is called the{" "}
                   <span className="text-primaryPink font-semibold">
@@ -37,7 +35,7 @@ const LeakyPipeline = () => {
                   Leaky pipeline is the phenomenon in which{" "}
                   <span className="text-primaryPink font-semibold">
                     our beliefs about gender difference in academic subject
-                    performance pushes girls out of the STEM fields
+                    performance pushes girls out of STEM fields
                   </span>{" "}
                   while encouraging boys to choose STEM.{" "}
                 </p>
