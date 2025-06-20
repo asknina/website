@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Banner from "@/components/layout/Banner";
+import GlitterCursor from "@/components/body/GlitterCursor";
 
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
       <GoogleTagManager gtmId={process.env.NEXT_GTM_ID || ""} />
       <body className={nunito.className}>
         <div className="bg-white min-h-screen w-full flex flex-col text-black">
+            <GlitterCursor/>
           <Header />
           <Banner />
           <div className="flex-1">{children}</div>
