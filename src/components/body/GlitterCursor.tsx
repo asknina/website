@@ -1,4 +1,5 @@
-// components/body/GlitterCursor.tsx
+//[Documentation to Glitter Component](https://www.notion.so/GlitterCursor-Component-Documentation-2183d312fafb80b785c2fb6455b43b0c)
+
 'use client'; // mouse only renders client facing
 
 import { useState, useEffect } from 'react';
