@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 const GlitterCursor = () => {
     // start position of mouse cursor
-    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [position, setPosition] = useState({ x: 0, y: 0 }); // Changed back to (0,0)
 
     // each glitter in the array has the following props
     const [glitters, setGlitters] = useState<Array<{
@@ -62,10 +62,10 @@ const GlitterCursor = () => {
                 prev
                     .map(g => ({
                         ...g,
-                        life: g.life -1 ,
-                        y: g.y +1,
+                        life: g.life - .9,
+                        y: g.y + 1,
                     }))
-                    .filter(g => g.life > 0 )
+                    .filter(g => g.life > 0)
             );
         });
 
@@ -74,19 +74,22 @@ const GlitterCursor = () => {
 
     return (
         <>
+            {/* Main cursor dot */}
             <div
-                className="fixed rounded-full z-[9999] shadow-[0_0_5px_white] w-[10px] h-[10px]"
+                className="fixed pointer-events-none opacity-0"
                 style={{
                     left: `${position.x}px`,
                     top: `${position.y}px`,
                     transform: 'translate(-50%, -50%)',
+                    backgroundColor: '#FFFFFF' // Added solid white background
                 }}
             />
 
+            {/* Glitter particles */}
             {glitters.map((glitter) => (
                 <div
                     key={glitter.id}
-                    className="fixed rounded-full z-[9998] transition-all duration-100 ease-out"
+                    className="fixed rounded-full pointer-events-none z-[9998] transition-all duration-100 ease-out"
                     style={{
                         left: `${glitter.x}px`,
                         top: `${glitter.y}px`,

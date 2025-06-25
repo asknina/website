@@ -26,8 +26,9 @@ export default function RootLayout({
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ""} />
       <GoogleTagManager gtmId={process.env.NEXT_GTM_ID || ""} />
       <body className={nunito.className}>
-        <div className="bg-white min-h-screen w-full flex flex-col text-black">
-            <GlitterCursor/>
+      <GlitterCursor />
+      <div className="bg-white min-h-screen w-full flex flex-col text-black">
+
           <Header />
           <Banner />
           <div className="flex-1">{children}</div>
