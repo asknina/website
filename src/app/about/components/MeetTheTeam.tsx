@@ -2,6 +2,7 @@ import React from "react";
 import anamitaProfile from "../../../../public/profiles/anamita-profile.jpeg";
 import srishtiProfile from "../../../../public/profiles/srishti-profile.jpeg";
 import maddieProfile from "../../../../public/profiles/maddie-profile.png";
+import lauraProfile from "../../../../public/profiles/laura-profile.jpeg"
 import Image from "next/image";
 
 const contributors = [
@@ -23,6 +24,11 @@ const contributors = [
     favoriteSTEMSubject: "Geology",
     image: maddieProfile,
   },
+  { name: "Laura Williams",
+    title: "Software Engineer Intern",
+    favoriteSTEMSubject: "Computer Science",
+    image: lauraProfile,
+  }
 ];
 const formerContributors = [
   {
