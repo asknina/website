@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 // using Parser to parse substack RSS feed
 import Parser from "rss-parser";
+export const runtime = 'nodejs'
 
 const parser = new Parser();
 
