@@ -15,24 +15,20 @@ const Video = () => {
             src="https://youtube.com/embed/1bLtK4Rdj7c"
             width={300}
             height={600}
+            loading="lazy"
           />
           <iframe
             src="https://youtube.com/embed/ba-4Kc9vun8"
             width={300}
             height={600}
+            loading="lazy"
           />
           <iframe
             src="https://youtube.com/embed/aqBPGmYc0cI"
             width={300}
             height={600}
+            loading="lazy"
           />
-          {/* <video width="1024" height="100%" controls preload="none">
-            <source
-              src="https://youtube.com/shorts/1bLtK4Rdj7c"
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
-          </video>{" "} */}
         </div>
       </div>
     </div>
