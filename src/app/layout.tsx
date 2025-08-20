@@ -9,7 +9,7 @@ import GlitterCursor from "@/components/body/GlitterCursor";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 
 const nunito = Nunito({ subsets: ["latin"] });
-export const runtime = "edge";
+
 export const metadata: Metadata = {
   title: "Ask Nina AI | AI agent for teen girls exploring STEM careers",
   description:
