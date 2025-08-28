@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   experimental: {
     optimizePackageImports: ["lucide-react"],
   },
   images: {
-    unoptimized: false,
+    unoptimized: true,
   },
   webpack: (config) => {
     config.module.rules.push({
